@@ -20,6 +20,7 @@
 		var	$window = $(window),
 			$body = $('body'),
 			$wrapper = $('#page-wrapper'),
+			$bannerMore = $('#banner .more'),
 			$banner = $('#banner'),
 			$header = $('#header');
 
@@ -86,12 +87,12 @@
 
 				$window.on('resize', function() { $window.trigger('scroll'); });
 
-				$banner.scrollex({
+  				$banner.scrollex({
 					bottom:		$header.outerHeight() + 1,
-					terminate:	function() { $header.removeClass('alt'); },
-					enter:		function() { $header.addClass('alt'); },
-					leave:		function() { $header.removeClass('alt'); }
-				});
+					terminate:	function() { $header.removeClass('alt'); $bannerMore.hide(); },
+					enter:		function() { $header.addClass('alt'); $bannerMore.show(); },
+					leave:		function() { $header.removeClass('alt'); $bannerMore.hide(); }
+				});  
 
 			}
 
