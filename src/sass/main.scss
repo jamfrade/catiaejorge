@@ -103,6 +103,11 @@
 		}
 	}
 
+ 	h1 {
+		font-size: 2em;
+		line-height: 1.75em;
+	} 
+
 	h2 {
 		font-size: 1.35em;
 		line-height: 1.75em;
@@ -1380,6 +1385,9 @@
 
 		h1 {
 			@include vendor('transition', 'opacity #{_duration(transitions)} ease');
+			font-family: _title-font(family);
+			font-weight: _title-font(weight-bold);
+			font-size: 1.5em;
 			height: inherit;
 			left: 1.25em;
 			line-height: inherit;
@@ -1479,15 +1487,17 @@
 		position: relative;
 		text-align: center;
 
-		h2 {
+		h1 {
 			@include vendor('transform', 'scale(1)');
 			@include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
 			display: inline-block;
-			font-size: 1.75em;
+			font-family: _title-font(family);
+			font-weight: _title-font(weight-bold);
 			opacity: 1;
-			padding: 0.35em 1em;
+			padding: 0.20em 1em;
 			position: relative;
 			z-index: 1;
+			margin: 0 0 (_size(element-margin) * 0.6) 0;
 
 			&:before, &:after {
 				@include vendor('transition', 'width 0.85s ease');
@@ -1511,14 +1521,28 @@
 			}
 		}
 
-		p {
-			letter-spacing: _size(letter-spacing-alt);
-			text-transform: uppercase;
-
-			a {
-				color: inherit;
-			}
+		h3 {
+			@include vendor('transform', 'scale(1)');
+			@include vendor('transition', ('transform 1s ease', 'opacity 1s ease'));
+			@include vendor('transition-delay', '0.5s');
+			font-size: 1.25em;
+			font-family: _title-font(family);
+			font-weight: _title-font(weight);
+			opacity: 1;
+			padding: 0.35em 1em;
+			position: relative;
+			z-index: 1;
+			margin: 0 0 (_size(element-margin) * 1.15) 0;
 		}
+
+ 		p {
+			//letter-spacing: _size(letter-spacing-alt);
+			margin: 0 0 (_size(element-margin) * 0.05) 0;
+
+			&:nth-of-type(2) {
+				margin: 0 0 (_size(element-margin) * 2) 0;
+			} 
+		} 
 
 		.more {
 			@include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
@@ -1560,7 +1584,7 @@
 		&:after {
 			@include vendor('pointer-events', 'none');
 			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
-			@include vendor('transition-delay', '1.25s');
+			@include vendor('transition-delay', '1.5s');
 			content: '';
 			background: _palette(bg);
 			display: block;
@@ -1576,8 +1600,13 @@
 			@include padding(7em, 3em);
 			min-height: 22em;
 
-			h2 {
-				font-size: 1.25em;
+			h1 {
+				font-size: 1.75em;
+				margin: 0 0 (_size(element-margin) * 0.5) 0;
+			}
+
+			h3 {
+				margin: 0 0 (_size(element-margin) * 0.75) 0;
 			}
 
 			br {
@@ -1585,12 +1614,14 @@
 			}
 
 			.more {
+				height: 6em;
+
 				span {
 					display: none;
 				}
 
 				&:after {
-					bottom: 0.5em;
+					bottom: 1.5em;
 				}
 			}
 		}
@@ -1598,8 +1629,17 @@
 
 	body.is-loading {
 		#banner {
-			h2 {
+			h1 {
 				@include vendor('transform', 'scale(0.95)');
+				opacity: 0;
+
+				&:before, &:after {
+					width: 0;
+				}
+			}
+
+			h3 {
+				@include vendor('transform', 'scale(2.5)');
 				opacity: 0;
 
 				&:before, &:after {

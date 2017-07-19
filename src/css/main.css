@@ -938,6 +938,10 @@ h1, h2, h3, h4, h5, h6 {
     color: inherit;
     text-decoration: none; }
 
+h1 {
+  font-size: 2em;
+  line-height: 1.75em; }
+
 h2 {
   font-size: 1.35em;
   line-height: 1.75em; }
@@ -2105,6 +2109,9 @@ body.is-menu-visible #menu {
     -webkit-transition: opacity 0.2s ease;
     -ms-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;
+    font-family: "Cabin Sketch";
+    font-weight: 700;
+    font-size: 1.5em;
     height: inherit;
     left: 1.25em;
     line-height: inherit;
@@ -2189,7 +2196,7 @@ body.is-menu-visible #menu {
   overflow: hidden;
   position: relative;
   text-align: center; }
-  #banner h2 {
+  #banner h1 {
     -moz-transform: scale(1);
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -2199,12 +2206,14 @@ body.is-menu-visible #menu {
     -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
     transition: transform 0.5s ease, opacity 0.5s ease;
     display: inline-block;
-    font-size: 1.75em;
+    font-family: "Cabin Sketch";
+    font-weight: 700;
     opacity: 1;
-    padding: 0.35em 1em;
+    padding: 0.20em 1em;
     position: relative;
-    z-index: 1; }
-    #banner h2:before, #banner h2:after {
+    z-index: 1;
+    margin: 0 0 1.2em 0; }
+    #banner h1:before, #banner h1:after {
       -moz-transition: width 0.85s ease;
       -webkit-transition: width 0.85s ease;
       -ms-transition: width 0.85s ease;
@@ -2219,17 +2228,37 @@ body.is-menu-visible #menu {
       height: 2px;
       position: absolute;
       width: 100%; }
-    #banner h2:before {
+    #banner h1:before {
       top: 0;
       left: 0; }
-    #banner h2:after {
+    #banner h1:after {
       bottom: 0;
       right: 0; }
+  #banner h3 {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -moz-transition: -moz-transform 1s ease, opacity 1s ease;
+    -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
+    -ms-transition: -ms-transform 1s ease, opacity 1s ease;
+    transition: transform 1s ease, opacity 1s ease;
+    -moz-transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s;
+    -ms-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+    font-size: 1.25em;
+    font-family: "Cabin Sketch";
+    font-weight: 400;
+    opacity: 1;
+    padding: 0.35em 1em;
+    position: relative;
+    z-index: 1;
+    margin: 0 0 2.3em 0; }
   #banner p {
-    letter-spacing: 0.225em;
-    text-transform: uppercase; }
-    #banner p a {
-      color: inherit; }
+    margin: 0 0 0.1em 0; }
+    #banner p:nth-of-type(2) {
+      margin: 0 0 4em 0; }
   #banner .more {
     -moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
     -webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
@@ -2281,10 +2310,10 @@ body.is-menu-visible #menu {
     -webkit-transition: opacity 3s ease-in-out;
     -ms-transition: opacity 3s ease-in-out;
     transition: opacity 3s ease-in-out;
-    -moz-transition-delay: 1.25s;
-    -webkit-transition-delay: 1.25s;
-    -ms-transition-delay: 1.25s;
-    transition-delay: 1.25s;
+    -moz-transition-delay: 1.5s;
+    -webkit-transition-delay: 1.5s;
+    -ms-transition-delay: 1.5s;
+    transition-delay: 1.5s;
     content: '';
     background: #2e3842;
     display: block;
@@ -2298,22 +2327,36 @@ body.is-menu-visible #menu {
     #banner {
       padding: 7em 3em 5em 3em ;
       min-height: 22em; }
-      #banner h2 {
-        font-size: 1.25em; }
+      #banner h1 {
+        font-size: 1.75em;
+        margin: 0 0 1em 0; }
+      #banner h3 {
+        margin: 0 0 1.5em 0; }
       #banner br {
         display: none; }
-      #banner .more span {
-        display: none; }
-      #banner .more:after {
-        bottom: 0.5em; } }
+      #banner .more {
+        height: 6em; }
+        #banner .more span {
+          display: none; }
+        #banner .more:after {
+          bottom: 1.5em; } }
 
-body.is-loading #banner h2 {
+body.is-loading #banner h1 {
   -moz-transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -ms-transform: scale(0.95);
   transform: scale(0.95);
   opacity: 0; }
-  body.is-loading #banner h2:before, body.is-loading #banner h2:after {
+  body.is-loading #banner h1:before, body.is-loading #banner h1:after {
+    width: 0; }
+
+body.is-loading #banner h3 {
+  -moz-transform: scale(2.5);
+  -webkit-transform: scale(2.5);
+  -ms-transform: scale(2.5);
+  transform: scale(2.5);
+  opacity: 0; }
+  body.is-loading #banner h3:before, body.is-loading #banner h3:after {
     width: 0; }
 
 body.is-loading #banner .more {
