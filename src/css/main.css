@@ -2335,7 +2335,8 @@ body.is-menu-visible #menu {
       #banner br {
         display: none; }
       #banner .more {
-        height: 6em; }
+        height: 6em;
+        margin-left: -8em; }
         #banner .more span {
           display: none; }
         #banner .more:after {
