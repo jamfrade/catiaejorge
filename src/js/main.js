@@ -34,9 +34,15 @@
 			});
 
 		// Mobile?
-			if (skel.vars.mobile)
+			if (skel.vars.mobile) {
 				$body.addClass('is-mobile');
-			else
+
+ 				$banner.css('height', $window.height());
+
+ 				$window.resize(function () {
+					$banner.css('height', $window.height());
+				}); 
+			} else
 				skel
 					.on('-medium !medium', function() {
 						$body.removeClass('is-mobile');
@@ -57,11 +63,10 @@
 			});
 
 		// Scrolly.
-			$('.scrolly')
-				.scrolly({
-					speed: 1500,
-					offset: $header.outerHeight()
-				});
+  			$('.scrolly').scrolly({
+				speed: 1500,
+				offset: $header.outerHeight()
+			});  
 
 		// Menu.
 			$('#menu')
@@ -82,18 +87,16 @@
 			if (skel.vars.IEVersion < 9)
 				$header.removeClass('alt');
 
-			if ($banner.length > 0
-			&&	$header.hasClass('alt')) {
+			if ($banner.length > 0 && $header.hasClass('alt')) {
 
 				$window.on('resize', function() { $window.trigger('scroll'); });
 
-  				$banner.scrollex({
-					bottom:		$header.outerHeight() + 2,
+   				$banner.scrollex({
+					bottom:		$header.outerHeight() + 50,
 					terminate:	function() { $header.removeClass('alt'); $bannerMore.hide(); },
 					enter:		function() { $header.addClass('alt'); $bannerMore.show(); },
 					leave:		function() { $header.removeClass('alt'); $bannerMore.hide(); }
-				});  
-
+				});
 			}
 
 	});
