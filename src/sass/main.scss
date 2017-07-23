@@ -17,7 +17,8 @@
 		large: '(max-width: 1280px)',
 		medium: '(max-width: 980px)',
 		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)'
+		xsmall: '(max-width: 480px)',
+		xxsmall: '(max-width: 350px)'
 	));
 
 	@include skel-layout((
@@ -1497,7 +1498,7 @@
 			padding: 0.20em 1em;
 			position: relative;
 			z-index: 1;
-			margin: 0 0 (_size(element-margin) * 0.6) 0;
+			margin: 0 0 (_size(element-margin) * 0.1) 0;
 
 			&:before, &:after {
 				@include vendor('transition', 'width 0.85s ease');
@@ -1532,16 +1533,16 @@
 			padding: 0.35em 1em;
 			position: relative;
 			z-index: 1;
-			margin: 0 0 (_size(element-margin) * 1.15) 0;
+			margin: 0 0 (_size(element-margin) * 0.05) 0;
 		}
 
  		p {
 			//letter-spacing: _size(letter-spacing-alt);
-			margin: 0 0 (_size(element-margin) * 0.05) 0;
-
+			margin: 0 0 (_size(element-margin) * 6.00) 0;
+/* 
 			&:nth-of-type(2) {
 				margin: 0 0 (_size(element-margin) * 2) 0;
-			} 
+			}  */
 		} 
 
 		.more {
@@ -1570,7 +1571,7 @@
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
-				bottom: 4em;
+				bottom: 2.5em;
 				content: '';
 				display: block;
 				height: 1.5em;
@@ -1598,16 +1599,22 @@
 
 		@include breakpoint(small) {
 			@include padding(7em, 3em);
-			min-height: 22em;
+			min-height: 25em;
 
 			h1 {
-				font-size: 1.75em;
-				margin: 0 0 (_size(element-margin) * 0.5) 0;
+				font-size: 1.65em;
+				padding: 0.20em 0.8em;
+				margin: 0 0 (_size(element-margin) * 0.1) 0;
 			}
 
 			h3 {
-				margin: 0 0 (_size(element-margin) * 0.75) 0;
+				font-size: 1.15em;
+				margin: 0 0 (_size(element-margin) * 0.05) 0;
 			}
+
+			p {
+				margin: 0 0 (_size(element-margin) * 6.5) 0;
+			} 
 
 			br {
 				display: none;
@@ -1622,8 +1629,26 @@
 				}
 
 				&:after {
-					bottom: 1.5em;
+					bottom: 2em;
 				}
+			}
+		}
+
+		@include breakpoint(xxsmall) {
+			h1 {
+				font-size: 1.6em;
+				padding: 0.15em 0.55em;
+				letter-spacing: _size(letter-spacing-title);
+				margin: 0 0 (_size(element-margin) * 0.1) 0;
+			}
+
+			h3 {
+				font-size: 1.1em;
+				margin: 0 0 (_size(element-margin) * 0.05) 0;
+			}
+
+			p {
+				margin: 0 0 (_size(element-margin) * 6.5) 0;
 			}
 		}
 	}
