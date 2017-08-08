@@ -98,7 +98,6 @@
 					leave:		function() { $header.removeClass('alt'); $bannerMore.hide(); }
 				});
 			}
-
 	});
 
 })(jQuery);
