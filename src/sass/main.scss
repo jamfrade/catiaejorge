@@ -90,6 +90,10 @@
 		margin: 0 0 _size(element-margin) 0;
 	}
 
+	p.nomargin {
+		margin: 0;
+	}
+
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
 		font-weight: _font(weight-extrabold);
@@ -1220,7 +1224,7 @@
 	}
 
 	.wrapper {
-		@include padding(6em, 0);
+		@include padding(4em, 0);
 
 		> .inner {
 			width: 60em;
