@@ -34,7 +34,7 @@
 	}
 
 	body {
-		background: _palette(bg);
+		background: white;
 
 		&.is-loading {
 			*, *:before, *:after {
@@ -1377,6 +1377,10 @@
 
 /* Header */
 
+	#header.alt nav#nav ul li a::after {
+		background-image: url('images/black-bars.svg');
+	}
+
 	#header {
 		@include vendor('transition', 'background-color #{_duration(transitions)} ease');
 		background: _palette(bg);
@@ -1589,7 +1593,7 @@
 		&:after {
 			@include vendor('pointer-events', 'none');
 			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
-			@include vendor('transition-delay', '1.5s');
+			@include vendor('transition-delay', '0.5s');
 			content: '';
 			background: _palette(bg);
 			display: block;
@@ -1865,7 +1869,8 @@
 
 	body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../img/banner.jpg")'));
+
+			//@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../img/banner.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1886,7 +1891,7 @@
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../img/banner.jpg")'));
+				//@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../img/banner.jpg")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -1895,5 +1900,48 @@
 			#footer {
 				background-color: darken(_palette(bg), 8);
 			}
+		}
+	}
+
+	div.img-preview {
+		img {
+			width: 320px;
+			height: 242px;
+			object-fit: cover;
+			border: 5px solid white;
+		}
+		display: inline-block;	
+	}
+
+	img.landing-image {
+		height: 100vh;
+		object-fit: contain;
+	}
+	
+	img.landing-image.is-mobile {
+		display: none;
+	}
+
+		
+	@media only screen 
+	and (max-device-width : 768px) {
+		div.img-preview {
+			img {
+				width: 95%;
+				height: 95%;
+				object-fit: cover;
+				border: 5px solid white;
+			}
+			text-align: center;
+			display: block;	
+		}
+	}
+
+	@media only screen 	and (max-device-width : 768px) {
+		img.landing-image {
+			display: none;
+		}
+		img.landing-image.is-mobile {
+			display: block;
 		}
 	}
