@@ -2422,7 +2422,7 @@ body.is-menu-visible #menu {
     width: 16em;
     z-index: 1; }
     #banner .more:after {
-      background-image: url("images/arrow.svg");
+      background-image: url("images/dark-arrow.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
