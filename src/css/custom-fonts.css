@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Gabriola';
+    src:
+        url('../fonts/gabriola/Gabriola.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/gabriola/Gabriola.woff2') format('woff2'),
+        url('../fonts/gabriola/Gabriola.woff') format('woff'),
+        url('../fonts/gabriola/Gabriola.ttf') format('truetype'),
+        url('../fonts/gabriola/Gabriola.svg#Gabriola') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eras Light ITC';
+    src:
+        url('../fonts/eras-light-itc/ErasITC-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/eras-light-itc/ErasITC-Light.woff2') format('woff2'),
+        url('../fonts/eras-light-itc/ErasITC-Light.woff') format('woff'),
+        url('../fonts/eras-light-itc/ErasITC-Light.ttf') format('truetype'),
+        url('../fonts/eras-light-itc/ErasITC-Light.svg#ErasITC-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
