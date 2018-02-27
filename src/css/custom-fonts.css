@@ -21,3 +21,15 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'SpringTime';
+    src:
+        url('../fonts/spring-time/SpringTimePersonalUse.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spring-time/SpringTimePersonalUse.woff2') format('woff2'),
+        url('../fonts/spring-time/SpringTimePersonalUse.woff') format('woff'),
+        url('../fonts/spring-time/SpringTimePersonalUse.ttf') format('truetype'),
+        url('../fonts/spring-time/SpringTimePersonalUse.svg#SpringTimePersonalUse') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
