@@ -1868,6 +1868,31 @@
 	}
 
 /* Landing */
+body #banner #catiaejorge {
+	width: 46vw;
+	height: 16vw;
+	background-image: url('../img/catiaejorgetitle.svg');
+	background-repeat: no-repeat;
+	background-position-y: 50%;
+	background-size: 100%; 
+	svg {
+		width: 100%;
+	}
+}
+
+@media only screen 	and (max-device-width : 768px) {
+	body #banner #catiaejorge {
+		width: 80vw;
+		height: 30vw;
+		background-image: url('../img/catiaejorgetitle.svg');
+		background-repeat: no-repeat;
+		background-position-y: 50%;
+		background-size: 100%; 
+		svg {
+			width: 100%;
+		}
+	}
+}
 
 	body.landing {
 		#page-wrapper {
@@ -1947,3 +1972,6 @@
 			display: block;
 		}
 	}
+
+	
+
