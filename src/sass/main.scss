@@ -1254,7 +1254,7 @@
 		}
 
 		&.style3 {
-			@include wrapper(accent5);
+			@include wrapper(accent3);
 		}
 
 		&.style4 {
@@ -1262,7 +1262,7 @@
 		}
 
 		&.style5 {
-			@include wrapper(accent7);
+			@include wrapper(accent5);
 		}
 
 		@include breakpoint(medium) {
@@ -1410,6 +1410,7 @@
 				display: block;
 				height: inherit;
 				line-height: inherit;
+				padding-top: 4px;
 
 				@include breakpoint(small) {
 					font-size: 0.8em;
@@ -1868,6 +1869,18 @@
 	}
 
 /* Landing */
+
+
+body #header #catiaejorgeheader {
+	height: 40px;
+}
+
+@media only screen 	and (max-device-width : 736px) {
+	body #header #catiaejorgeheader {
+		height: 36px;
+	}
+}
+
 body #banner #catiaejorge {
 	width: 46vw;
 	height: 16vw;
@@ -1880,7 +1893,7 @@ body #banner #catiaejorge {
 	}
 }
 
-@media only screen 	and (max-device-width : 768px) {
+@media only screen 	and (max-device-width : 736px) {
 	body #banner #catiaejorge {
 		width: 80vw;
 		height: 30vw;
