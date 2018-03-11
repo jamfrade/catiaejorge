@@ -1160,6 +1160,10 @@ header p {
   position: relative;
   top: -0.25em; }
 
+header h2 {
+  font-family: "Gabriola", Helvetica, sans-serif;
+  font-weight: 700; }
+
 header h3 + p {
   font-size: 1.1em; }
 
@@ -2241,7 +2245,7 @@ body.is-menu-visible #menu {
     -webkit-transition: opacity 0.2s ease;
     -ms-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;
-    font-family: "Gabriola";
+    font-family: "Gabriola", Helvetica, sans-serif;
     font-weight: 700;
     font-size: 1.5em;
     height: inherit;
@@ -2339,7 +2343,7 @@ body.is-menu-visible #menu {
     -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
     transition: transform 0.5s ease, opacity 0.5s ease;
     display: inline-block;
-    font-family: "Gabriola";
+    font-family: "Gabriola", Helvetica, sans-serif;
     font-weight: 700;
     opacity: 1;
     padding: 0.20em 1em;
@@ -2381,7 +2385,7 @@ body.is-menu-visible #menu {
     -ms-transition-delay: 0.5s;
     transition-delay: 0.5s;
     font-size: 1.25em;
-    font-family: "Gabriola";
+    font-family: "Gabriola", Helvetica, sans-serif;
     font-weight: 400;
     opacity: 1;
     padding: 0.35em 1em;
@@ -2647,11 +2651,19 @@ body.is-mobile #main > header {
 
 /* Landing */
 body #header #catiaejorgeheader {
-  height: 40px; }
-
-@media only screen and (max-device-width: 736px) {
-  body #header #catiaejorgeheader {
-    height: 36px; } }
+  display: block;
+  width: 122.7px;
+  height: 40px;
+  background-image: url("../img/catiaejorge.svg");
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-size: 100%; }
+  body #header #catiaejorgeheader svg {
+    width: 100%; }
+  @media screen and (max-width: 736px) {
+    body #header #catiaejorgeheader {
+      width: 110.4px;
+      height: 36px; } }
 
 body #banner #catiaejorge {
   width: 46vw;
@@ -2662,17 +2674,10 @@ body #banner #catiaejorge {
   background-size: 100%; }
   body #banner #catiaejorge svg {
     width: 100%; }
-
-@media only screen and (max-device-width: 736px) {
-  body #banner #catiaejorge {
-    width: 80vw;
-    height: 30vw;
-    background-image: url("../img/catiaejorge.svg");
-    background-repeat: no-repeat;
-    background-position-y: 50%;
-    background-size: 100%; }
-    body #banner #catiaejorge svg {
-      width: 100%; } }
+  @media screen and (max-width: 736px) {
+    body #banner #catiaejorge {
+      width: 80vw;
+      height: 30vw; } }
 
 body.landing #page-wrapper {
   background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/banner.jpg");
